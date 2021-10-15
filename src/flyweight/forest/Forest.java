@@ -1,6 +1,8 @@
 package flyweight.forest;
 
 import flyweight.trees.Tree;
+import flyweight.trees.TreeFactory;
+import flyweight.trees.TreeType;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,7 +13,8 @@ public class Forest extends JFrame {
     private List<Tree> trees = new ArrayList<>();
 
     public void plantTree(int x, int y, String name, Color color, long otherTreeData) {
-        Tree tree = new Tree(x, y, name, color, otherTreeData);
+        TreeType type = TreeFactory.getTreeType(name, color, otherTreeData);
+        Tree tree = new Tree(x, y, type);
         trees.add(tree);
     }
 

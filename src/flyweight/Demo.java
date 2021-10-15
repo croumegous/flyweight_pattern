@@ -5,7 +5,6 @@ import flyweight.forest.Forest;
 import java.awt.*;
 
 public class Demo {
-
     static int CANVAS_SIZE = 500;
     static double TREES_TO_DRAW = 100000000;
     static double TREE_TYPES = 2;
@@ -24,7 +23,6 @@ public class Demo {
 
         Long totalTime = System.currentTimeMillis() - startTime;
         System.out.println(TREES_TO_DRAW + " trees created, in " + totalTime.toString() + " ms");
-
     }
 
     private static int random(int min, int max) {
