@@ -13,8 +13,8 @@ public class Forest extends JFrame {
     private List<Tree> trees = new ArrayList<>();
 
     public void plantTree(int x, int y, String name, Color color, long otherTreeData) {
-        TreeType type = TreeFactory.getTreeType(name, color, otherTreeData);
-        Tree tree = new Tree(x, y, type);
+        TreeType type = TreeFactory.getTreeType(); // TODO: add intrinsic (shared) attributes in parameters
+        Tree tree = new Tree(); // TODO: create a new Tree with extrinsic (unique) attributes and the type
         trees.add(tree);
     }
 

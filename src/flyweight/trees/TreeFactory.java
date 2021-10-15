@@ -7,10 +7,11 @@ import java.util.Map;
 public class TreeFactory {
     static Map<String, TreeType> treeTypes = new HashMap<>();
 
-    public static TreeType getTreeType(String name, Color color, long otherTreeData) {
+    // TODO: implement TreeFactory
+    public static TreeType getTreeType() { // TODO: add intrinsic (shared) attribute
         TreeType result = treeTypes.get(name);
         if (result == null) {
-            result = new TreeType(name, color, otherTreeData);
+            result = new TreeType(...); // TODO: invoke with all intrinsic attribute
             treeTypes.put(name, result);
         }
         return result;

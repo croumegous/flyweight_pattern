@@ -7,12 +7,13 @@ import javax.imageio.ImageIO;
 import java.io.IOException;
 
 public class TreeType {
-    private String name;
+    //TODO: add the other intrinsic (shared) attribute
+    private String ...;
     private Color color;
     private long otherTreeData;
 
-    public TreeType(String name, Color color, long otherTreeData) {
-        this.name = name;
+    public TreeType(String ..., Color color, long otherTreeData) {
+        // this... = ...; // TODO
         this.color = color;
         this.otherTreeData = otherTreeData;        
     }
